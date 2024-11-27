@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Iniciar Sesión";
+}
+
+<h2>Iniciar Sesión</h2>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <div>
+        <label for="username">Usuario:</label>
+        <input type="text" name="username" id="username" required />
+    </div>
+    <div>
+        <label for="Password">Contraseña:</label>
+        <input type="password" name="password" id="password" required />
+    </div>
+    <button type="submit">Ingresar</button>
+    <div>
+        <h4>¿No tines una cuenta? Registrate ahora! 😄</h4>
+        <a>@Html.ActionLink("Registrarse Aquí", "Registro", "Account", new { area = "" }, new { @class = "nav-link" })</a>
+    </div>
+
+}
