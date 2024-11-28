@@ -19,6 +19,9 @@ namespace CodigoProgramado_Grupo4.Models
         public string Role { get; set; }
         public bool isAuthenticated { get; set; }
         public virtual ICollection<Pedido> Pedidos { get; set; }
+        public virtual ICollection<Suscripcion> Suscripciones { get; set; }
+        public virtual ICollection<Resena> Resenas { get; set; }
+        public virtual ICollection<ListaDeseos> ListaDeseos { get; set; }
 
     }
 }

@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace CodigoProgramado_Grupo4.Models
 {
-    public class Pedido
+    public class Suscripcion
     {
-        public int Id { get; set; }
-        public DateTime fecha { get; set; }
-        public bool estado { get; set; }
+        public int Id_suscripcion { get; set; }
+        public string Codigo_subs { get; set; }
+        public string Tipo_subs { get; set; }
         public int UsuarioId { get; set; }
         public virtual Usuario Usuarios { get; set; }
-        public virtual ICollection<Carrito> Carritos { get; set; }
 
     }
 }
