@@ -112,3 +112,4 @@ C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Gr
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoPr.1A99314B.Up2Date
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.dll
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.pdb
+C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.ArreglosdeBD.resources
