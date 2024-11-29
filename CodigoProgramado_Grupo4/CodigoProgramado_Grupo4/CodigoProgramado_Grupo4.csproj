@@ -142,9 +142,21 @@
     <Compile Include="Migrations\202411242238008_Tareas_Pedidos_Y_Productos.Designer.cs">
       <DependentUpon>202411242238008_Tareas_Pedidos_Y_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411290017361_Arreglos de BD.cs" />
+    <Compile Include="Migrations\202411290017361_Arreglos de BD.Designer.cs">
+      <DependentUpon>202411290017361_Arreglos de BD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Carrito.cs" />
+    <Compile Include="Models\CarritoProducto.cs" />
+    <Compile Include="Models\Catalogo.cs" />
+    <Compile Include="Models\CodigoDescuento.cs" />
+    <Compile Include="Models\FiltroBusqueda.cs" />
+    <Compile Include="Models\ListaDeseos.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\Resena.cs" />
+    <Compile Include="Models\Suscripcion.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuarioPedidosDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -257,6 +269,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202411242238008_Tareas_Pedidos_Y_Productos.resx">
       <DependentUpon>202411242238008_Tareas_Pedidos_Y_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411290017361_Arreglos de BD.resx">
+      <DependentUpon>202411290017361_Arreglos de BD.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

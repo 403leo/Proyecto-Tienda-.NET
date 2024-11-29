@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace CodigoProgramado_Grupo4.Models
 {
-    public class Pedido
+    public class Resena
+
     {
         public int Id { get; set; }
-        public DateTime fecha { get; set; }
-        public bool estado { get; set; }
+        public String comentario { get; set; }
         public int UsuarioId { get; set; }
         public virtual Usuario Usuarios { get; set; }
-        public virtual ICollection<Carrito> Carritos { get; set; }
-
+        public int ProductoId { get; set; }
+        public virtual Producto Productos { get; set; }
     }
 }
