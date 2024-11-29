@@ -1,0 +1,26 @@
+﻿@model CodigoProgramado_Grupo4.Models.Carrito
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Carrito</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pedidos.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pedidos.Id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

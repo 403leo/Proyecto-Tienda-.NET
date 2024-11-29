@@ -127,9 +127,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CarritoesController.cs" />
+    <Compile Include="Controllers\CarritoProductosController.cs" />
+    <Compile Include="Controllers\CatalogosController.cs" />
+    <Compile Include="Controllers\CodigoDescuentoesController.cs" />
+    <Compile Include="Controllers\FiltroBusquedasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListaDeseosController.cs" />
     <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ResenasController.cs" />
+    <Compile Include="Controllers\SuscripcionController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Filters\CustomAuthenticationFilter.cs" />
     <Compile Include="Filters\CustomAuthorizationFilter.cs" />
@@ -145,6 +153,14 @@
     <Compile Include="Migrations\202411290017361_Arreglos de BD.cs" />
     <Compile Include="Migrations\202411290017361_Arreglos de BD.Designer.cs">
       <DependentUpon>202411290017361_Arreglos de BD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411290033432_AtributoRestante.cs" />
+    <Compile Include="Migrations\202411290033432_AtributoRestante.Designer.cs">
+      <DependentUpon>202411290033432_AtributoRestante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411290052054_AtributoRestante2.cs" />
+    <Compile Include="Migrations\202411290052054_AtributoRestante2.Designer.cs">
+      <DependentUpon>202411290052054_AtributoRestante2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Carrito.cs" />
@@ -235,6 +251,46 @@
     <Content Include="Views\Account\Registro.cshtml" />
     <Content Include="Views\Account\LogginError.cshtml" />
     <Content Include="Views\Account\RegisterError.cshtml" />
+    <Content Include="Views\Resenas\Create.cshtml" />
+    <Content Include="Views\Resenas\Delete.cshtml" />
+    <Content Include="Views\Resenas\Details.cshtml" />
+    <Content Include="Views\Resenas\Edit.cshtml" />
+    <Content Include="Views\Resenas\Index.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Create.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Delete.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Details.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Edit.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Index.cshtml" />
+    <Content Include="Views\ListaDeseos\Create.cshtml" />
+    <Content Include="Views\ListaDeseos\Delete.cshtml" />
+    <Content Include="Views\ListaDeseos\Details.cshtml" />
+    <Content Include="Views\ListaDeseos\Edit.cshtml" />
+    <Content Include="Views\ListaDeseos\Index.cshtml" />
+    <Content Include="Views\Suscripcion\Create.cshtml" />
+    <Content Include="Views\Suscripcion\Delete.cshtml" />
+    <Content Include="Views\Suscripcion\Details.cshtml" />
+    <Content Include="Views\Suscripcion\Edit.cshtml" />
+    <Content Include="Views\Suscripcion\Index.cshtml" />
+    <Content Include="Views\Catalogos\Create.cshtml" />
+    <Content Include="Views\Catalogos\Delete.cshtml" />
+    <Content Include="Views\Catalogos\Details.cshtml" />
+    <Content Include="Views\Catalogos\Edit.cshtml" />
+    <Content Include="Views\Catalogos\Index.cshtml" />
+    <Content Include="Views\CarritoProductos\Create.cshtml" />
+    <Content Include="Views\CarritoProductos\Delete.cshtml" />
+    <Content Include="Views\CarritoProductos\Details.cshtml" />
+    <Content Include="Views\CarritoProductos\Edit.cshtml" />
+    <Content Include="Views\CarritoProductos\Index.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Create.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Delete.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Details.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Edit.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Index.cshtml" />
+    <Content Include="Views\Carritoes\Create.cshtml" />
+    <Content Include="Views\Carritoes\Delete.cshtml" />
+    <Content Include="Views\Carritoes\Details.cshtml" />
+    <Content Include="Views\Carritoes\Edit.cshtml" />
+    <Content Include="Views\Carritoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -272,6 +328,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202411290017361_Arreglos de BD.resx">
       <DependentUpon>202411290017361_Arreglos de BD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411290033432_AtributoRestante.resx">
+      <DependentUpon>202411290033432_AtributoRestante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411290052054_AtributoRestante2.resx">
+      <DependentUpon>202411290052054_AtributoRestante2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

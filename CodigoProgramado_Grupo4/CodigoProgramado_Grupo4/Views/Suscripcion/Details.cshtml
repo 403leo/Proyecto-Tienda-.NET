@@ -1,0 +1,42 @@
+﻿@model CodigoProgramado_Grupo4.Models.Suscripcion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Suscripcion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo_subs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo_subs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_subs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_subs)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
