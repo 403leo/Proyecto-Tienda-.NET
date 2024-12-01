@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
@@ -146,21 +146,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202411242238008_Tareas_Pedidos_Y_Productos.cs" />
-    <Compile Include="Migrations\202411242238008_Tareas_Pedidos_Y_Productos.Designer.cs">
-      <DependentUpon>202411242238008_Tareas_Pedidos_Y_Productos.cs</DependentUpon>
+    <Compile Include="Migrations\202412011928491_RemoverImagenProducto.cs" />
+    <Compile Include="Migrations\202412011928491_RemoverImagenProducto.Designer.cs">
+      <DependentUpon>202412011928491_RemoverImagenProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202411290017361_Arreglos de BD.cs" />
-    <Compile Include="Migrations\202411290017361_Arreglos de BD.Designer.cs">
-      <DependentUpon>202411290017361_Arreglos de BD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411290033432_AtributoRestante.cs" />
-    <Compile Include="Migrations\202411290033432_AtributoRestante.Designer.cs">
-      <DependentUpon>202411290033432_AtributoRestante.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202411290052054_AtributoRestante2.cs" />
-    <Compile Include="Migrations\202411290052054_AtributoRestante2.Designer.cs">
-      <DependentUpon>202411290052054_AtributoRestante2.cs</DependentUpon>
+    <Compile Include="Migrations\202412012002579_AtributoImagenProductoAgregado.cs" />
+    <Compile Include="Migrations\202412012002579_AtributoImagenProductoAgregado.Designer.cs">
+      <DependentUpon>202412012002579_AtributoImagenProductoAgregado.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Carrito.cs" />
@@ -240,11 +232,6 @@
     <Content Include="Views\Pedidos\Details.cshtml" />
     <Content Include="Views\Pedidos\Edit.cshtml" />
     <Content Include="Views\Pedidos\Index.cshtml" />
-    <Content Include="Views\Productos\Create.cshtml" />
-    <Content Include="Views\Productos\Delete.cshtml" />
-    <Content Include="Views\Productos\Details.cshtml" />
-    <Content Include="Views\Productos\Edit.cshtml" />
-    <Content Include="Views\Productos\Index.cshtml" />
     <Content Include="Views\Shared\_Pedidos.cshtml" />
     <Content Include="Views\Account\AccessDenied.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -291,6 +278,11 @@
     <Content Include="Views\Carritoes\Details.cshtml" />
     <Content Include="Views\Carritoes\Edit.cshtml" />
     <Content Include="Views\Carritoes\Index.cshtml" />
+    <Content Include="Views\Productos\Create.cshtml" />
+    <Content Include="Views\Productos\Delete.cshtml" />
+    <Content Include="Views\Productos\Details.cshtml" />
+    <Content Include="Views\Productos\Edit.cshtml" />
+    <Content Include="Views\Productos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,17 +315,11 @@
     <Content Include="Scripts\jquery-3.7.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202411242238008_Tareas_Pedidos_Y_Productos.resx">
-      <DependentUpon>202411242238008_Tareas_Pedidos_Y_Productos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202412011928491_RemoverImagenProducto.resx">
+      <DependentUpon>202412011928491_RemoverImagenProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411290017361_Arreglos de BD.resx">
-      <DependentUpon>202411290017361_Arreglos de BD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411290033432_AtributoRestante.resx">
-      <DependentUpon>202411290033432_AtributoRestante.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411290052054_AtributoRestante2.resx">
-      <DependentUpon>202411290052054_AtributoRestante2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202412012002579_AtributoImagenProductoAgregado.resx">
+      <DependentUpon>202412012002579_AtributoImagenProductoAgregado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -366,12 +352,12 @@
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -51,11 +51,20 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.rutaImagen)
+            @Html.DisplayNameFor(model => model.Imagen)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.rutaImagen)
+            @if (Model.Imagen != null && Model.Imagen.Length > 0)
+            {
+                string imageBase64 = Convert.ToBase64String(Model.Imagen);
+                string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                <img src="@imageSrc" alt="Imagen del libro" />
+            }
+            else
+            {
+                <p>No hay imagen disponible</p>
+            }
         </dd>
 
     </dl>
@@ -64,5 +73,3 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-
-

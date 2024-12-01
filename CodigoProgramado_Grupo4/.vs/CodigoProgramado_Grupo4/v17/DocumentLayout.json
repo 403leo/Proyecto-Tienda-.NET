@@ -1,40 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\leona\\onedrive\\documents\\sexto cuatrimestre fidelitas u\\programacion avanzada\\codigoproyecto\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\controllers\\listadeseoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\controllers\\listadeseoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\filters\\resultloggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\filters\\resultloggingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\filters\\loggingactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\filters\\loggingactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\filters\\customauthorizationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\filters\\customauthorizationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\filters\\customauthenticationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\filters\\customauthenticationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -42,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 56,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -262,108 +229,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ListaDeseosController.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\ListaDeseosController.cs",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Controllers\\ListaDeseosController.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\ListaDeseosController.cs",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Controllers\\ListaDeseosController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowDQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T01:03:14.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T01:02:00.745Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ResultLoggingFilter.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Filters\\ResultLoggingFilter.cs",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Filters\\ResultLoggingFilter.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Filters\\ResultLoggingFilter.cs",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Filters\\ResultLoggingFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T01:01:46.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoggingActionFilter.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Filters\\LoggingActionFilter.cs",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Filters\\LoggingActionFilter.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Filters\\LoggingActionFilter.cs",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Filters\\LoggingActionFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T01:01:43.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomAuthorizationFilter.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Filters\\CustomAuthorizationFilter.cs",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Filters\\CustomAuthorizationFilter.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Filters\\CustomAuthorizationFilter.cs",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Filters\\CustomAuthorizationFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T01:01:41.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CustomAuthenticationFilter.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Filters\\CustomAuthenticationFilter.cs",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Filters\\CustomAuthenticationFilter.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Filters\\CustomAuthenticationFilter.cs",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Filters\\CustomAuthenticationFilter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T01:01:39.192Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T00:56:52.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Usuarios\\Create.cshtml",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Views\\Usuarios\\Create.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Usuarios\\Create.cshtml",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\Usuarios\\Create.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T00:53:30.201Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

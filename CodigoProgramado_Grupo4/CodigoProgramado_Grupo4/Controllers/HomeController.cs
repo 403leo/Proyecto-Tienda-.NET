@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodigoProgramado_Grupo4.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,17 @@ namespace CodigoProgramado_Grupo4.Controllers
 {
     public class HomeController : Controller
     {
+        private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();
         public ActionResult Index()
         {
-            return View();
+            // Recuperar los productos principales (filtrar según criterio)
+            var principalesProductos = db.Productos
+                .Where(p => p.estado && p.disponibilidadInventario) // Solo productos activos con inventario
+                .OrderByDescending(p => p.Precio) // Orden por criterio (puedes cambiarlo)
+                .Take(5) // Límite de productos
+                .ToList();
+
+            return View(principalesProductos);
         }
 
         public ActionResult About()

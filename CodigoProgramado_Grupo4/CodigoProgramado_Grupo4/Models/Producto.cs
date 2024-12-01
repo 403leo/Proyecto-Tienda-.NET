@@ -13,7 +13,7 @@ namespace CodigoProgramado_Grupo4.Models
         public decimal Precio { get; set; }
         public bool disponibilidadInventario { get; set; }
         public bool estado { get; set; }
-        public string rutaImagen { get; set; }
+        public byte[] Imagen { get; set; }
         public virtual ICollection<Catalogo> Catalogos { get; set; }
         public virtual ICollection<CarritoProducto> CarritoProductos { get; set; }
         public virtual ICollection<CodigoDescuento> CodigoDescuentos { get; set; }

@@ -6,10 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using CodigoProgramado_Grupo4.Filters;
 using CodigoProgramado_Grupo4.Models;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
+    [CustomAuthorizationFilter("Admin")]
     public class CatalogosController : Controller
     {
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();

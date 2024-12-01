@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -48,10 +49,18 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado,rutaImagen")] Producto producto)
+        public ActionResult Create([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen)
         {
             if (ModelState.IsValid)
             {
+                if (Imagen != null && Imagen.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen.InputStream))
+                    {
+                        producto.Imagen = binaryReader.ReadBytes(Imagen.ContentLength);
+                    }
+                }
+
                 db.Productos.Add(producto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -80,10 +89,18 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado,rutaImagen")] Producto producto)
+        public ActionResult Edit([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen)
         {
             if (ModelState.IsValid)
             {
+                if (Imagen != null && Imagen.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen.InputStream))
+                    {
+                        producto.Imagen = binaryReader.ReadBytes(Imagen.ContentLength);
+                    }
+                }
+
                 db.Entry(producto).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
