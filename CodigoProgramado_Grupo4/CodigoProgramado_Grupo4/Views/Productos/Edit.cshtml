@@ -58,6 +58,20 @@
     </div>
 
     <div class="form-group">
+        @Html.LabelFor(model => model.Imagen2, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <input type="file" id="Imagen2" name="Imagen2" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Imagen3, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <input type="file" id="Imagen3" name="Imagen3" />
+        </div>
+    </div>
+
+    <div class="form-group">
         @Html.LabelFor(model => model.estado, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             <div class="checkbox">

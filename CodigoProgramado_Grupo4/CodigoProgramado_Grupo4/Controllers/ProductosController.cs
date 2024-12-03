@@ -49,7 +49,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen)
+        public ActionResult Create([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen, HttpPostedFileBase Imagen2, HttpPostedFileBase Imagen3)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +58,22 @@ namespace CodigoProgramado_Grupo4.Controllers
                     using (var binaryReader = new BinaryReader(Imagen.InputStream))
                     {
                         producto.Imagen = binaryReader.ReadBytes(Imagen.ContentLength);
+                    }
+                }
+
+                if (Imagen2 != null && Imagen2.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen2.InputStream))
+                    {
+                        producto.Imagen2 = binaryReader.ReadBytes(Imagen2.ContentLength);
+                    }
+                }
+
+                if (Imagen3 != null && Imagen3.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen3.InputStream))
+                    {
+                        producto.Imagen3 = binaryReader.ReadBytes(Imagen3.ContentLength);
                     }
                 }
 
@@ -89,7 +105,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen)
+        public ActionResult Edit([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen, HttpPostedFileBase Imagen2, HttpPostedFileBase Imagen3)
         {
             if (ModelState.IsValid)
             {
@@ -98,6 +114,22 @@ namespace CodigoProgramado_Grupo4.Controllers
                     using (var binaryReader = new BinaryReader(Imagen.InputStream))
                     {
                         producto.Imagen = binaryReader.ReadBytes(Imagen.ContentLength);
+                    }
+                }
+
+                if (Imagen2 != null && Imagen2.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen2.InputStream))
+                    {
+                        producto.Imagen2 = binaryReader.ReadBytes(Imagen2.ContentLength);
+                    }
+                }
+
+                if (Imagen3 != null && Imagen3.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen3.InputStream))
+                    {
+                        producto.Imagen3 = binaryReader.ReadBytes(Imagen3.ContentLength);
                     }
                 }
 

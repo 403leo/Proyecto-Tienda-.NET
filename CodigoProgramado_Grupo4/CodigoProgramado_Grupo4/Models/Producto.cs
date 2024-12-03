@@ -14,6 +14,8 @@ namespace CodigoProgramado_Grupo4.Models
         public bool disponibilidadInventario { get; set; }
         public bool estado { get; set; }
         public byte[] Imagen { get; set; }
+        public byte[] Imagen2 { get; set; }
+        public byte[] Imagen3 { get; set; }
         public virtual ICollection<Catalogo> Catalogos { get; set; }
         public virtual ICollection<CarritoProducto> CarritoProductos { get; set; }
         public virtual ICollection<CodigoDescuento> CodigoDescuentos { get; set; }

@@ -59,7 +59,41 @@
             {
                 string imageBase64 = Convert.ToBase64String(Model.Imagen);
                 string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
-                <img src="@imageSrc" alt="Imagen del libro" />
+                <img src="@imageSrc" alt="Imagen del libro" width="100%" height="500px" />
+            }
+            else
+            {
+                <p>No hay imagen disponible</p>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen2)
+        </dt>
+
+        <dd>
+            @if (Model.Imagen2 != null && Model.Imagen2.Length > 0)
+            {
+                string imageBase64 = Convert.ToBase64String(Model.Imagen2);
+                string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                <img src="@imageSrc" alt="Imagen del libro" width="100%" height="500px" />
+            }
+            else
+            {
+                <p>No hay imagen disponible</p>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen3)
+        </dt>
+
+        <dd>
+            @if (Model.Imagen3 != null && Model.Imagen3.Length > 0)
+            {
+                string imageBase64 = Convert.ToBase64String(Model.Imagen3);
+                string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                <img src="@imageSrc" alt="Imagen del libro" width="100%" height="500px" />
             }
             else
             {
