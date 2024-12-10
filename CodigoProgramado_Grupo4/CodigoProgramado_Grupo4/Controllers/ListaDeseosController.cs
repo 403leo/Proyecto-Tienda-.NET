@@ -41,7 +41,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         // GET: ListaDeseos/Create
         public ActionResult Create()
         {
-            ViewBag.ProductoId = new SelectList(db.Productos, "Id", "CodigoProducto");
+            ViewBag.ProductoId = new SelectList(db.Productos, "Id", "NombreProducto");
             ViewBag.UsuarioId = new SelectList(db.Usuarios, "Id", "Nombre");
             return View();
         }
@@ -60,7 +60,7 @@ namespace CodigoProgramado_Grupo4.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ProductoId = new SelectList(db.Productos, "Id", "CodigoProducto", listaDeseos.ProductoId);
+            ViewBag.ProductoId = new SelectList(db.Productos, "Id", "NombreProducto", listaDeseos.ProductoId);
             ViewBag.UsuarioId = new SelectList(db.Usuarios, "Id", "Nombre", listaDeseos.UsuarioId);
             return View(listaDeseos);
         }
