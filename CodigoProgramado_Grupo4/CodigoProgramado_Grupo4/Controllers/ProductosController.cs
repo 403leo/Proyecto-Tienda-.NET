@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using CodigoProgramado_Grupo4.Filters;
 using CodigoProgramado_Grupo4.Models;
+using System.Web.Mvc.Filters;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
@@ -174,5 +175,61 @@ namespace CodigoProgramado_Grupo4.Controllers
             }
             base.Dispose(disposing);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ListaDeseosPorProducto(int productId)
+        {
+            // Se obtiene el usuaria actual 
+
+            var usuarioActual = (Usuario)Session["User"];
+
+            // Se verifica que el usuario actual esté autenticado
+            if (usuarioActual == null || !usuarioActual.isAuthenticated)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Unauthorized, "Usuario no autenticado.");
+            }
+
+            // Se verifica que el producto existe en la base de datos 
+            var productoActual = db.Productos.Find(productId);
+            if(productoActual == null) 
+            {
+                return HttpNotFound("Producto no encontrado.");
+            }
+
+            // Se busca si el producto ya existe en la lista de deseos del usuario 
+
+            var existingWishlistItem = db.ListaDeseos.
+                FirstOrDefault(w => w.UsuarioId == usuarioActual.Id && w.ProductoId == productId);
+
+            if (existingWishlistItem != null) 
+            { 
+                // En caso de que el usuario ya haya colocado el producto en su lista de favoritos,
+                // al apretar nuevamente el boton de la estrella, se eliminará el producto
+                db.ListaDeseos.Remove(existingWishlistItem);
+            }
+            else 
+            {
+                // Si no es el caso, el producto se agrega a favoritos.
+                var listaDeseos = new ListaDeseos
+                {
+                    // En esta parte se asigna el usuario y el producto actuales a lista de deseos automaticamente
+                    UsuarioId = usuarioActual.Id,
+                    ProductoId = productoActual.Id
+
+                };
+                db.ListaDeseos.Add(listaDeseos);
+            }
+
+            // Se guardan los cambios
+            db.SaveChanges();
+
+            // Se redirige a la vista de producto
+            return RedirectToAction("Details", "Productos", new { id = productId });
+
+        }
+
+
+
     }
 }
