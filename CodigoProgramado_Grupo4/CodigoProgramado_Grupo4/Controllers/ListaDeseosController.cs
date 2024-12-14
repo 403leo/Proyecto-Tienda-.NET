@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -11,16 +12,50 @@ using CodigoProgramado_Grupo4.Models;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
-    [CustomAuthorizationFilter("Admin")]
+    //[CustomAuthorizationFilter("Admin")]
+    [Authorize]
     public class ListaDeseosController : Controller
     {
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();
 
         // GET: ListaDeseos
+        [AllowAnonymous]
+
+
         public ActionResult Index()
         {
-            var listaDeseos = db.ListaDeseos.Include(l => l.Productos).Include(l => l.Usuarios);
-            return View(listaDeseos.ToList());
+            try
+            {
+                var user = (Usuario)Session["User"];
+                if (user == null)
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+
+                var listaDeseos = db.ListaDeseos.Include(l => l.Productos).Include(l => l.Usuarios);
+
+                string rolUsuario = User.IsInRole("Admin") ? "Admin" : "User";
+
+                if (rolUsuario == "User")
+                {
+                    if (Session["User"] is Usuario usuarioActual)
+                    {
+                        int usuarioActualId = usuarioActual.Id;
+                        listaDeseos = listaDeseos.Where(l => l.UsuarioId == usuarioActualId);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Login", "Account");
+                    }
+                }
+
+                return View(listaDeseos.ToList());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error en ListaDeseosController.Index: {ex.Message}");
+                throw; // O redirige a una página de error
+            }
         }
 
         // GET: ListaDeseos/Details/5

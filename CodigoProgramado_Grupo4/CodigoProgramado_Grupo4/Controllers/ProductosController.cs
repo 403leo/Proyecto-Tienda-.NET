@@ -13,7 +13,7 @@ using System.Web.Mvc.Filters;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
-    [CustomAuthorizationFilter("Admin")]
+    
     public class ProductosController : Controller
     {
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();
