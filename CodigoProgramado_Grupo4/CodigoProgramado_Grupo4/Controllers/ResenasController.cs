@@ -53,6 +53,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,comentario,UsuarioId,ProductoId")] Resena resena)
         {
+
             if (ModelState.IsValid)
             {
                 db.Resenas.Add(resena);

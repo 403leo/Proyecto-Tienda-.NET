@@ -101,36 +101,32 @@
                 <p>No hay imagen disponible</p>
             }
         </dd>
-        <p>Producto ID: @Model.Id</p>
-        <p>Usuario Actual: @(Session["User"] != null ? ((CodigoProgramado_Grupo4.Models.Usuario)Session["User"]).Nombre : "No identificado")</p>
-
         
         
 
 
         <dd>
-            <form action="@Url.Action("ListaDeseosPorProducto","Productos")" method="post">
+            <form action="@Url.Action("ListaDeseosPorProducto", "Productos")" method="post">
                 @Html.AntiForgeryToken()
                 @Html.Hidden("productId", Model.Id)
                 <button type="submit" class="btn btn-primary" title="Agregar/Quitar de lista de deseos">
-                    <!--Verifica que la lista de deseos del modelo no sea nula-->
-                    @if(Model.ListaDeseos != null &&
-
-                    // Busca si hay algun elemento en la lista de deseos que coincida con el usuario actual
-                    
-                    Model.ListaDeseos.Any(w => 
-                    
-                    // Compara el UsuarioId del elemento con el Id del usuario actual en la sesion 
-                    w.UsuarioId == ((CodigoProgramado_Grupo4.Models.Usuario)Session["User"]).Id))
+                    @if (Session["User"] == null)
+                    {
+                        <i class="fa fa-star" style="color: gray;"></i>
+                    }
+                    else if (Model.ListaDeseos != null &&
+                        Model.ListaDeseos.Any(w => w.UsuarioId == ((CodigoProgramado_Grupo4.Models.Usuario)Session["User"]).Id))
                     {
                         <i class="fa fa-star" style="color: gold;"></i>
-                    } else 
-                    { 
+                    }
+                    else
+                    {
                         <i class="fa fa-star" style="color: gray;"></i>
                     }
                 </button>
-
             </form>
+
+
 
         </dd>
 

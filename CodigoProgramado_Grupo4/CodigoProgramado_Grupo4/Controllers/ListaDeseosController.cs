@@ -20,32 +20,45 @@ namespace CodigoProgramado_Grupo4.Controllers
 
         // GET: ListaDeseos
         [AllowAnonymous]
-
-
         public ActionResult Index()
         {
             try
             {
-                var user = (Usuario)Session["User"];
+                var user = Session["User"] as Usuario;
+
                 if (user == null)
                 {
                     return RedirectToAction("Login", "Account");
                 }
 
+                // Verificar el rol directamente desde la sesión
+                string rolUsuario = user.Role == "Admin" ? "Admin" : "User";
+
+                ViewBag.RolUsuario = rolUsuario;
+
                 var listaDeseos = db.ListaDeseos.Include(l => l.Productos).Include(l => l.Usuarios);
 
-                string rolUsuario = User.IsInRole("Admin") ? "Admin" : "User";
-
+                // Si es usuario normal, filtrar su lista de deseos
                 if (rolUsuario == "User")
                 {
-                    if (Session["User"] is Usuario usuarioActual)
+                    int usuarioActualId = user.Id;
+                    listaDeseos = listaDeseos.Where(l => l.UsuarioId == usuarioActualId);
+                }
+
+                // Si es admin y la sesión tiene "VerTodas"
+                if (Session["VerTodas"] != null && (bool)Session["VerTodas"])
+                {
+                    ViewBag.VerTodas = true;
+                }
+                else
+                {
+                    ViewBag.VerTodas = false;
+
+                    // Mostrar solo sus listas si no se ha activado "VerTodas"
+                    if (rolUsuario == "Admin")
                     {
-                        int usuarioActualId = usuarioActual.Id;
+                        int usuarioActualId = user.Id;
                         listaDeseos = listaDeseos.Where(l => l.UsuarioId == usuarioActualId);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Login", "Account");
                     }
                 }
 
@@ -54,11 +67,27 @@ namespace CodigoProgramado_Grupo4.Controllers
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error en ListaDeseosController.Index: {ex.Message}");
-                throw; // O redirige a una página de error
+                return RedirectToAction("Error", "Home");
             }
         }
 
+
+        // Acción para cambiar el modo del administrador
+        [AllowAnonymous]
+        public ActionResult CambiarModo()
+        {
+            bool verTodas = (bool)(Session["VerTodas"] ?? false);
+            Session["VerTodas"] = !verTodas;
+
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
         // GET: ListaDeseos/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -74,6 +103,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         }
 
         // GET: ListaDeseos/Create
+        [AllowAnonymous]
         public ActionResult Create()
         {
             ViewBag.ProductoId = new SelectList(db.Productos, "Id", "NombreProducto");
@@ -86,6 +116,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult Create([Bind(Include = "Id,UsuarioId,ProductoId")] ListaDeseos listaDeseos)
         {
             if (ModelState.IsValid)
@@ -101,6 +132,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         }
 
         // GET: ListaDeseos/Edit/5
+        [AllowAnonymous]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -122,6 +154,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult Edit([Bind(Include = "Id,UsuarioId,ProductoId")] ListaDeseos listaDeseos)
         {
             if (ModelState.IsValid)
@@ -136,6 +169,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         }
 
         // GET: ListaDeseos/Delete/5
+        [AllowAnonymous]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -153,6 +187,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         // POST: ListaDeseos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult DeleteConfirmed(int id)
         {
             ListaDeseos listaDeseos = db.ListaDeseos.Find(id);

@@ -3,9 +3,17 @@
 }
 
 <h2>Iniciar Sesión</h2>
+@if (TempData["MensajeError"] != null)
+{
+    <div class="alert alert-warning">
+        @TempData["MensajeError"]
+    </div>
+}
+
 
 @using (Html.BeginForm("Login", "Account", FormMethod.Post))
 {
+
     <div>
         <label for="username">Usuario:</label>
         <input type="text" name="username" id="username" required />
