@@ -60,7 +60,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< Updated upstream
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Web.config",
               "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Web.config",
@@ -119,14 +118,6 @@
               "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Account\\Registro.cshtml",
               "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\Account\\Registro.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
-=======
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\xampp\\htdocs\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABFAAAAAAAAAA==",
->>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-27T18:40:41.908Z",
               "EditorCaption": ""
