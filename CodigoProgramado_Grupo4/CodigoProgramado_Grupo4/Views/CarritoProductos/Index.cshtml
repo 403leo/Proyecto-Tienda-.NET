@@ -5,10 +5,16 @@
 }
 
 <h2>Index</h2>
+<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <form method="post" action="@Url.Action("CanjearCodigo", "CarritoProductos")" id="miFormulario">
+        <input type="text" class="form-control" id="codigo" name="code" placeholder="Ingrese un código de descuento" />
+        <button type="submit" class="btn btn-primary">Canjear</button>
+    </form>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>

@@ -288,6 +288,7 @@
     <Content Include="Views\Productos\Edit.cshtml" />
     <Content Include="Views\Productos\Index.cshtml" />
     <Content Include="Views\Shared\_Resenas.cshtml" />
+    <Content Include="Views\CarritoProductos\ErrorDescuento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

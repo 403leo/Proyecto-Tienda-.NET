@@ -11,7 +11,6 @@ using CodigoProgramado_Grupo4.Models;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
-    [CustomAuthorizationFilter("Admin")]
     public class CarritoProductosController : Controller
     {
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();
@@ -22,6 +21,29 @@ namespace CodigoProgramado_Grupo4.Controllers
             var carritoProductos = db.CarritoProductos.Include(c => c.Carritos);
             return View(carritoProductos.ToList());
         }
+
+        public ActionResult ErrorDescuento()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CanjearCodigo(string code)
+        {
+            if (string.IsNullOrEmpty(code))
+            {
+                return RedirectToAction("ErrorDescuento");
+            }
+
+            var verifyCode = db.CodigoDescuentos.FirstOrDefault(c => c.codigo == code);
+            if (verifyCode != null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return RedirectToAction("ErrorDescuento");
+        }
+
 
         // GET: CarritoProductos/Details/5
         public ActionResult Details(int? id)
