@@ -1,0 +1,55 @@
+﻿@model IEnumerable<CodigoProgramado_Grupo4.Models.ListaDeseos>
+
+@{
+    var rolUsuario = ViewBag.RolUsuario as string;
+    var verTodas = ViewBag.VerTodas as bool? ?? true;
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@if (ViewBag.RolUsuario == "Admin")
+{
+    <div>
+        <a href="@Url.Action("CambiarModo", "ListaDeseos")" class="btn btn-info">
+            @if (ViewBag.VerTodas)
+            {
+                <text>Ver mis listas de deseos</text>
+            }
+            else
+            {
+                <text>Ver todas las listas de deseos</text>
+            }
+        </a>
+    </div>
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Usuario</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Productos.NombreProducto)</td>
+                <td>@Html.DisplayFor(modelItem => item.Usuarios.Nombre)</td>
+                <td>
+                    @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

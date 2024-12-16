@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CodigoProgramado_Grupo4.Models.CarritoProducto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <form method="post" action="@Url.Action("CanjearCodigo", "CarritoProductos")" id="miFormulario">
+        <input type="text" class="form-control" id="codigo" name="code" placeholder="Ingrese un código de descuento" />
+        <button type="submit" class="btn btn-primary">Canjear</button>
+    </form>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Carritos.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Carritos.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

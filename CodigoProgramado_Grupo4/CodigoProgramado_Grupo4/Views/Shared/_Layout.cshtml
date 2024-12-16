@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" style="background-color: #04394E;">
         <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Tienda", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,15 @@
                     <li>@Html.ActionLink("Login", "Login", "Account", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Usuarios", "Index", "Usuarios", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Productos", "Index", "Productos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Pedidos", "Index", "Pedidos", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Carrito", "Index", "Carritoes", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("CarritoProductos", "Index", "CarritoProductos", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Catalogos", "Index", "Catalogos", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("CodigoDescuentos", "Index", "CodigoDescuentoes", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("FiltroBusquedas", "Index", "FiltroBusquedas", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("ListaDeseos", "Index", "ListaDeseos", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Resenas", "Index", "Resenas", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Suscripcion", "Index", "Suscripcion", new { area = "" }, new { @class = "nav-link" })</li>
+
                 </ul>
             </div>
         </div>

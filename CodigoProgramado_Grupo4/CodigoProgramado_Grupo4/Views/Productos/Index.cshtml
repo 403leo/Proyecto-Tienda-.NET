@@ -26,9 +26,6 @@
         <th>
             @Html.DisplayNameFor(model => model.estado)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.rutaImagen)
-        </th>
         <th></th>
     </tr>
 
@@ -48,9 +45,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.estado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.rutaImagen)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

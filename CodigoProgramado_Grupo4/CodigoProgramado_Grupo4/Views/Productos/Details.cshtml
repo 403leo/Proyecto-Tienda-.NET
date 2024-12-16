@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Details";
 }
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <h2>Details</h2>
 
@@ -51,12 +52,84 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.rutaImagen)
+            @Html.DisplayNameFor(model => model.Imagen)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.rutaImagen)
+            @if (Model.Imagen != null && Model.Imagen.Length > 0)
+            {
+                string imageBase64 = Convert.ToBase64String(Model.Imagen);
+                string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                <img src="@imageSrc" alt="Imagen del libro" width="100%" height="500px" />
+            }
+            else
+            {
+                <p>No hay imagen disponible</p>
+            }
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen2)
+        </dt>
+
+        <dd>
+            @if (Model.Imagen2 != null && Model.Imagen2.Length > 0)
+            {
+                string imageBase64 = Convert.ToBase64String(Model.Imagen2);
+                string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                <img src="@imageSrc" alt="Imagen del libro" width="100%" height="500px" />
+            }
+            else
+            {
+                <p>No hay imagen disponible</p>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen3)
+        </dt>
+
+        <dd>
+            @if (Model.Imagen3 != null && Model.Imagen3.Length > 0)
+            {
+                string imageBase64 = Convert.ToBase64String(Model.Imagen3);
+                string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                <img src="@imageSrc" alt="Imagen del libro" width="100%" height="500px" />
+            }
+            else
+            {
+                <p>No hay imagen disponible</p>
+            }
+        </dd>
+        
+        
+
+
+        <dd>
+            <form action="@Url.Action("ListaDeseosPorProducto", "Productos")" method="post">
+                @Html.AntiForgeryToken()
+                @Html.Hidden("productId", Model.Id)
+                <button type="submit" class="btn btn-primary" title="Agregar/Quitar de lista de deseos">
+                    @if (Session["User"] == null)
+                    {
+                        <i class="fa fa-star" style="color: gray;"></i>
+                    }
+                    else if (Model.ListaDeseos != null &&
+                        Model.ListaDeseos.Any(w => w.UsuarioId == ((CodigoProgramado_Grupo4.Models.Usuario)Session["User"]).Id))
+                    {
+                        <i class="fa fa-star" style="color: gold;"></i>
+                    }
+                    else
+                    {
+                        <i class="fa fa-star" style="color: gray;"></i>
+                    }
+                </button>
+            </form>
+
+
+
+        </dd>
+
 
     </dl>
 </div>
@@ -65,4 +138,5 @@
     @Html.ActionLink("Back to List", "Index")
 </p>
 
-
+<h3>Reseñas</h3>
+@Html.Partial("_Resenas", Model.Resenas)

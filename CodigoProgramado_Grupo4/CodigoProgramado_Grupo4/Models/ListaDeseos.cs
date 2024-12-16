@@ -10,7 +10,7 @@ namespace CodigoProgramado_Grupo4.Models
         public int Id { get; set; }
         public int UsuarioId { get; set; }
         public virtual Usuario Usuarios { get; set; }
-        public int ProdcutoId { get; set; }
+        public int ProductoId { get; set; }
         public virtual Producto Productos { get; set; }
     }
 }

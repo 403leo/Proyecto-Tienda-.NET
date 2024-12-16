@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
@@ -127,9 +127,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CarritoesController.cs" />
+    <Compile Include="Controllers\CarritoProductosController.cs" />
+    <Compile Include="Controllers\CatalogosController.cs" />
+    <Compile Include="Controllers\CodigoDescuentoesController.cs" />
+    <Compile Include="Controllers\FiltroBusquedasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListaDeseosController.cs" />
     <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ResenasController.cs" />
+    <Compile Include="Controllers\SuscripcionController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Filters\CustomAuthenticationFilter.cs" />
     <Compile Include="Filters\CustomAuthorizationFilter.cs" />
@@ -138,13 +146,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202411242238008_Tareas_Pedidos_Y_Productos.cs" />
-    <Compile Include="Migrations\202411242238008_Tareas_Pedidos_Y_Productos.Designer.cs">
-      <DependentUpon>202411242238008_Tareas_Pedidos_Y_Productos.cs</DependentUpon>
+    <Compile Include="Migrations\202412011928491_RemoverImagenProducto.cs" />
+    <Compile Include="Migrations\202412011928491_RemoverImagenProducto.Designer.cs">
+      <DependentUpon>202412011928491_RemoverImagenProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202411290017361_Arreglos de BD.cs" />
-    <Compile Include="Migrations\202411290017361_Arreglos de BD.Designer.cs">
-      <DependentUpon>202411290017361_Arreglos de BD.cs</DependentUpon>
+    <Compile Include="Migrations\202412012002579_AtributoImagenProductoAgregado.cs" />
+    <Compile Include="Migrations\202412012002579_AtributoImagenProductoAgregado.Designer.cs">
+      <DependentUpon>202412012002579_AtributoImagenProductoAgregado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412030450236_AtributosImagenes_1_Y_.cs" />
+    <Compile Include="Migrations\202412030450236_AtributosImagenes_1_Y_.Designer.cs">
+      <DependentUpon>202412030450236_AtributosImagenes_1_Y_.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Carrito.cs" />
@@ -224,17 +236,59 @@
     <Content Include="Views\Pedidos\Details.cshtml" />
     <Content Include="Views\Pedidos\Edit.cshtml" />
     <Content Include="Views\Pedidos\Index.cshtml" />
-    <Content Include="Views\Productos\Create.cshtml" />
-    <Content Include="Views\Productos\Delete.cshtml" />
-    <Content Include="Views\Productos\Details.cshtml" />
-    <Content Include="Views\Productos\Edit.cshtml" />
-    <Content Include="Views\Productos\Index.cshtml" />
     <Content Include="Views\Shared\_Pedidos.cshtml" />
     <Content Include="Views\Account\AccessDenied.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Registro.cshtml" />
     <Content Include="Views\Account\LogginError.cshtml" />
     <Content Include="Views\Account\RegisterError.cshtml" />
+    <Content Include="Views\Resenas\Create.cshtml" />
+    <Content Include="Views\Resenas\Delete.cshtml" />
+    <Content Include="Views\Resenas\Details.cshtml" />
+    <Content Include="Views\Resenas\Edit.cshtml" />
+    <Content Include="Views\Resenas\Index.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Create.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Delete.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Details.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Edit.cshtml" />
+    <Content Include="Views\FiltroBusquedas\Index.cshtml" />
+    <Content Include="Views\ListaDeseos\Create.cshtml" />
+    <Content Include="Views\ListaDeseos\Delete.cshtml" />
+    <Content Include="Views\ListaDeseos\Details.cshtml" />
+    <Content Include="Views\ListaDeseos\Edit.cshtml" />
+    <Content Include="Views\ListaDeseos\Index.cshtml" />
+    <Content Include="Views\Suscripcion\Create.cshtml" />
+    <Content Include="Views\Suscripcion\Delete.cshtml" />
+    <Content Include="Views\Suscripcion\Details.cshtml" />
+    <Content Include="Views\Suscripcion\Edit.cshtml" />
+    <Content Include="Views\Suscripcion\Index.cshtml" />
+    <Content Include="Views\Catalogos\Create.cshtml" />
+    <Content Include="Views\Catalogos\Delete.cshtml" />
+    <Content Include="Views\Catalogos\Details.cshtml" />
+    <Content Include="Views\Catalogos\Edit.cshtml" />
+    <Content Include="Views\Catalogos\Index.cshtml" />
+    <Content Include="Views\CarritoProductos\Create.cshtml" />
+    <Content Include="Views\CarritoProductos\Delete.cshtml" />
+    <Content Include="Views\CarritoProductos\Details.cshtml" />
+    <Content Include="Views\CarritoProductos\Edit.cshtml" />
+    <Content Include="Views\CarritoProductos\Index.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Create.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Delete.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Details.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Edit.cshtml" />
+    <Content Include="Views\CodigoDescuentoes\Index.cshtml" />
+    <Content Include="Views\Carritoes\Create.cshtml" />
+    <Content Include="Views\Carritoes\Delete.cshtml" />
+    <Content Include="Views\Carritoes\Details.cshtml" />
+    <Content Include="Views\Carritoes\Edit.cshtml" />
+    <Content Include="Views\Carritoes\Index.cshtml" />
+    <Content Include="Views\Productos\Create.cshtml" />
+    <Content Include="Views\Productos\Delete.cshtml" />
+    <Content Include="Views\Productos\Details.cshtml" />
+    <Content Include="Views\Productos\Edit.cshtml" />
+    <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\Shared\_Resenas.cshtml" />
+    <Content Include="Views\CarritoProductos\ErrorDescuento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -267,11 +321,14 @@
     <Content Include="Scripts\jquery-3.7.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202411242238008_Tareas_Pedidos_Y_Productos.resx">
-      <DependentUpon>202411242238008_Tareas_Pedidos_Y_Productos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202412011928491_RemoverImagenProducto.resx">
+      <DependentUpon>202412011928491_RemoverImagenProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202411290017361_Arreglos de BD.resx">
-      <DependentUpon>202411290017361_Arreglos de BD.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202412012002579_AtributoImagenProductoAgregado.resx">
+      <DependentUpon>202412012002579_AtributoImagenProductoAgregado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412030450236_AtributosImagenes_1_Y_.resx">
+      <DependentUpon>202412030450236_AtributosImagenes_1_Y_.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -306,10 +363,10 @@
     <PropertyGroup>
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

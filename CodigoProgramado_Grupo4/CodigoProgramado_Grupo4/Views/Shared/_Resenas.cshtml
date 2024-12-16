@@ -1,0 +1,34 @@
+﻿@model IEnumerable<CodigoProgramado_Grupo4.Models.Resena>
+
+<div class="mb-4 text-end">
+    <a href="@Url.Action("Create", "Resenas", new { productoId = ViewBag.ProductoId })" class="btn btn-success">
+        Agregar Reseña
+    </a>
+</div>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-warning text-center" role="alert">
+        No hay reseñas disponibles.
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var producto in Model)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text">@Html.DisplayFor(modelItem => producto.comentario)</p>
+                        <div class="d-flex justify-content-end">
+                            <a href="@Url.Action("Edit", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-primary me-2">Editar</a>
+                            <a href="@Url.Action("Details", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-info me-2">Detalles</a>
+                            <a href="@Url.Action("Delete", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-danger">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

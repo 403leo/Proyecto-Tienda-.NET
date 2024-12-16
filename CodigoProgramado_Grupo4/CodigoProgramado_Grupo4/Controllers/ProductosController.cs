@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CodigoProgramado_Grupo4.Filters;
 using CodigoProgramado_Grupo4.Models;
+using System.Web.Mvc.Filters;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
-    [CustomAuthorizationFilter("Admin")]
+    
     public class ProductosController : Controller
     {
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();
@@ -48,10 +50,34 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado,rutaImagen")] Producto producto)
+        public ActionResult Create([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen, HttpPostedFileBase Imagen2, HttpPostedFileBase Imagen3)
         {
             if (ModelState.IsValid)
             {
+                if (Imagen != null && Imagen.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen.InputStream))
+                    {
+                        producto.Imagen = binaryReader.ReadBytes(Imagen.ContentLength);
+                    }
+                }
+
+                if (Imagen2 != null && Imagen2.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen2.InputStream))
+                    {
+                        producto.Imagen2 = binaryReader.ReadBytes(Imagen2.ContentLength);
+                    }
+                }
+
+                if (Imagen3 != null && Imagen3.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen3.InputStream))
+                    {
+                        producto.Imagen3 = binaryReader.ReadBytes(Imagen3.ContentLength);
+                    }
+                }
+
                 db.Productos.Add(producto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -80,10 +106,34 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado,rutaImagen")] Producto producto)
+        public ActionResult Edit([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen, HttpPostedFileBase Imagen2, HttpPostedFileBase Imagen3)
         {
             if (ModelState.IsValid)
             {
+                if (Imagen != null && Imagen.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen.InputStream))
+                    {
+                        producto.Imagen = binaryReader.ReadBytes(Imagen.ContentLength);
+                    }
+                }
+
+                if (Imagen2 != null && Imagen2.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen2.InputStream))
+                    {
+                        producto.Imagen2 = binaryReader.ReadBytes(Imagen2.ContentLength);
+                    }
+                }
+
+                if (Imagen3 != null && Imagen3.ContentLength > 0)
+                {
+                    using (var binaryReader = new BinaryReader(Imagen3.InputStream))
+                    {
+                        producto.Imagen3 = binaryReader.ReadBytes(Imagen3.ContentLength);
+                    }
+                }
+
                 db.Entry(producto).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -125,5 +175,50 @@ namespace CodigoProgramado_Grupo4.Controllers
             }
             base.Dispose(disposing);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ListaDeseosPorProducto(int productId)
+        {
+            var usuarioActual = (Usuario)Session["User"];
+
+            if (usuarioActual == null || !usuarioActual.isAuthenticated)
+            {
+                // Redirige a la página de registro
+                TempData["MensajeError"] = "Debes registrarte para agregar productos a favoritos.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            var productoActual = db.Productos.Find(productId);
+            if (productoActual == null)
+            {
+                return HttpNotFound("Producto no encontrado.");
+            }
+
+            var existingWishlistItem = db.ListaDeseos
+                .FirstOrDefault(w => w.UsuarioId == usuarioActual.Id && w.ProductoId == productId);
+
+            if (existingWishlistItem != null)
+            {
+                db.ListaDeseos.Remove(existingWishlistItem);
+            }
+            else
+            {
+                var listaDeseos = new ListaDeseos
+                {
+                    UsuarioId = usuarioActual.Id,
+                    ProductoId = productoActual.Id
+                };
+                db.ListaDeseos.Add(listaDeseos);
+            }
+
+            db.SaveChanges();
+            return RedirectToAction("Details", "Productos", new { id = productId });
+        }
+
+
+
+
+
     }
 }

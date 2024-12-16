@@ -1,0 +1,42 @@
+﻿@model CodigoProgramado_Grupo4.Models.Resena
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Resena</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Productos.CodigoProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productos.CodigoProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comentario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comentario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

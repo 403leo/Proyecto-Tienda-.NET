@@ -34,8 +34,6 @@ C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Av
 C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\EntityFramework.SqlServer.xml
 C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\PagedList.xml
 C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\PagedList.Mvc.xml
-C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.Tareas_Pedidos_Y_Productos.resources
-C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.GenerateResource.cache
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\CodigoProgramado_Grupo4.dll.config
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\CodigoProgramado_Grupo4.dll
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\CodigoProgramado_Grupo4.pdb
@@ -68,7 +66,6 @@ C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoP
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Newtonsoft.Json.xml
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Antlr3.Runtime.pdb
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.AssemblyReference.cache
-C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.Tareas_Pedidos_Y_Productos.resources
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.GenerateResource.cache
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.CoreCompileInputs.cache
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoPr.1A99314B.Up2Date
@@ -112,4 +109,10 @@ C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Gr
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoPr.1A99314B.Up2Date
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.dll
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.pdb
-C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.ArreglosdeBD.resources
+C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.RemoverImagenProducto.resources
+C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.GenerateResource.cache
+C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributoImagenProductoAgregado.resources
+C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributosImagenes_1_Y_.resources
+C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.RemoverImagenProducto.resources
+C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributoImagenProductoAgregado.resources
+C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributosImagenes_1_Y_.resources
