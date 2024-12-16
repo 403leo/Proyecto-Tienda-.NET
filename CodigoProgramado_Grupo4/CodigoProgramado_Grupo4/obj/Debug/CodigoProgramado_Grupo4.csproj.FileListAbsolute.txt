@@ -104,7 +104,6 @@ C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Gr
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Newtonsoft.Json.xml
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Antlr3.Runtime.pdb
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.AssemblyReference.cache
-C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.Tareas_Pedidos_Y_Productos.resources
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.GenerateResource.cache
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.CoreCompileInputs.cache
 C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoPr.1A99314B.Up2Date
@@ -115,3 +114,6 @@ C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Av
 C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.GenerateResource.cache
 C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributoImagenProductoAgregado.resources
 C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributosImagenes_1_Y_.resources
+C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.RemoverImagenProducto.resources
+C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributoImagenProductoAgregado.resources
+C:\xampp\htdocs\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributosImagenes_1_Y_.resources

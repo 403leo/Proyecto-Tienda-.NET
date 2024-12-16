@@ -3,48 +3,119 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title | Bazar en Linea</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+
+
+<style>
+
+
+
+    .navbar-nav .nav-link {
+        border: 1px solid #00875e;
+        margin: 2px;
+        transition: background-color 0.3s;
+    }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #00875e;
+        }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+        .navbar-brand img {
+            margin-right: 8px;
+        }
+</style>
+
+
+
+
 </head>
 
 
 
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" style="background-color: #04394E;">
-        <div class="container">
-            @Html.ActionLink("Tienda", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="background-color: #04394E;">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Login", "Login", "Account", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Usuarios", "Index", "Usuarios", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Productos", "Index", "Productos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Carrito", "Index", "Carritoes", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("CarritoProductos", "Index", "CarritoProductos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Catalogos", "Index", "Catalogos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("CodigoDescuentos", "Index", "CodigoDescuentoes", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("FiltroBusquedas", "Index", "FiltroBusquedas", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("ListaDeseos", "Index", "ListaDeseos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Resenas", "Index", "Resenas", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Suscripcion", "Index", "Suscripcion", new { area = "" }, new { @class = "nav-link" })</li>
-
-                </ul>
+    <main>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" style="background-color: #04394e;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="data:image/png;base64,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" alt="Book Icon" width="30" height="30">
+                    Bazar
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            @Html.ActionLink("Principal", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Login", "Login", "Account", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Usuarios", "Index", "Usuarios", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Productos", "Index", "Productos", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Carrito", "Index", "Carritoes", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("CarritoProductos", "Index", "CarritoProductos", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Catalogos", "Index", "Catalogos", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("CodigoDescuentos", "Index", "CodigoDescuentoes", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("FiltroBusquedas", "Index", "FiltroBusquedas", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("ListaDeseos", "Index", "ListaDeseos", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Reseñas", "Index", "Resenas", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Suscripcion", "Index", "Suscripcion", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </main>
+
+
+
+
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer class="text-center py-3 d-flex justify-content-center align-items-center"
+                style="background-color: #04394e; color: white; position: relative; bottom: 0; width: 100%;">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="mb-0 me-2">&copy; @DateTime.Now.Year | Bazar en Linea | </p>
+                    <a href="@Url.Action("Contact", "Home")" target="_blank" style="color: #00875e; text-decoration: none;">Contacto</a>
+                </div>
+            </div>
         </footer>
     </div>
 
