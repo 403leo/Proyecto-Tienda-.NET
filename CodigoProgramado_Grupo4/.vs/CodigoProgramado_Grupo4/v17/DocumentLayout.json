@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\controllers\\carritoproductoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\controllers\\carritoproductoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\controllers\\carritoproductoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\views\\carritoproductos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\views\\carritoproductos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\carritoproductos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\views\\carritoproductos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\codigoprogramado_grupo4\\views\\carritoproductos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\carritoproductos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -38,9 +38,9 @@
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Web.config",
               "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Web.config",
-              "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Web.config*",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Web.config*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA7AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Web.config",
+              "RelativeToolTip": "CodigoProgramado_Grupo4\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-12-16T23:52:18.015Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-16T23:50:26.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T23:50:26.705Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-16T23:50:23.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T23:50:23.988Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "CodigoProgramado_Grupo4\\Controllers\\CarritoProductosController.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAiwB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T23:47:05.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T23:47:05.093Z"
             }
           ]
         }
