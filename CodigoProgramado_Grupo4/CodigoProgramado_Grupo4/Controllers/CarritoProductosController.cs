@@ -11,7 +11,7 @@ using CodigoProgramado_Grupo4.Models;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
-    [CustomAuthorizationFilter("User")]
+    [CustomAuthorizationFilter("Admin")]
     public class CarritoProductosController : Controller
     {
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();
@@ -19,8 +19,16 @@ namespace CodigoProgramado_Grupo4.Controllers
         // GET: CarritoProductos
         public ActionResult Index()
         {
-            var carritoProductos = db.CarritoProductos.Include(c => c.Carritos);
-            return View(carritoProductos.ToList());
+            var carritoProductos = db.CarritoProductos.Include(cp => cp.Productos).ToList();
+
+            // Asegurarse de inicializar ViewBag.Total aunque no haya productos
+            var total = carritoProductos.Any()
+                ? carritoProductos.Sum(cp => cp.Productos.Sum(p => p.Precio) * cp.Cantidad)
+                : 0;
+
+            ViewBag.Total = total;
+
+            return View(carritoProductos);
         }
 
         public ActionResult ErrorDescuento()
@@ -64,7 +72,9 @@ namespace CodigoProgramado_Grupo4.Controllers
         // GET: CarritoProductos/Create
         public ActionResult Create()
         {
-            ViewBag.CarritoId = new SelectList(db.Carritos, "Id", "Id");
+            ViewBag.Productos = new SelectList(db.Productos.Where(p => p.disponibilidadInventario), "Id", "NombreProducto");
+            ViewBag.Carritos = new SelectList(db.Carritos, "Id", "Id");
+
             return View();
         }
 
@@ -73,16 +83,28 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Cantidad,CarritoId")] CarritoProducto carritoProducto)
+        public ActionResult Create([Bind(Include = "Id,Cantidad,CarritoId,ProductoId")] CarritoProducto carritoProducto, int ProductoId)
         {
             if (ModelState.IsValid)
             {
-                db.CarritoProductos.Add(carritoProducto);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                // Obtener el producto seleccionado
+                var producto = db.Productos.Find(ProductoId);
+
+                if (producto != null && producto.disponibilidadInventario)
+                {
+                    carritoProducto.Productos = new List<Producto> { producto };
+                    db.CarritoProductos.Add(carritoProducto);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+
+                ModelState.AddModelError("", "El producto seleccionado no está disponible.");
             }
 
-            ViewBag.CarritoId = new SelectList(db.Carritos, "Id", "Id", carritoProducto.CarritoId);
+            // Re-llenar listas en caso de error
+            ViewBag.Productos = new SelectList(db.Productos.Where(p => p.disponibilidadInventario), "Id", "NombreProducto");
+            ViewBag.Carritos = new SelectList(db.Carritos, "Id", "Id");
+
             return View(carritoProducto);
         }
 
@@ -153,5 +175,79 @@ namespace CodigoProgramado_Grupo4.Controllers
             }
             base.Dispose(disposing);
         }
+
+        [HttpPost]
+        public ActionResult AgregarProducto(int productoId, int cantidad)
+        {
+            if (cantidad <= 0)
+            {
+                return RedirectToAction("Index", new { error = "La cantidad debe ser mayor a cero." });
+            }
+
+            var producto = db.Productos.Find(productoId);
+            if (producto == null || !producto.disponibilidadInventario || !producto.estado)
+            {
+                return RedirectToAction("Index", new { error = "Producto no disponible." });
+            }
+
+            // Crear o actualizar un CarritoProducto
+            var carritoProducto = db.CarritoProductos
+                .FirstOrDefault(cp => cp.Productos.Any(p => p.Id == productoId) && cp.CarritoId == 1); // Reemplaza "1" por el ID del carrito actual
+
+            if (carritoProducto == null)
+            {
+                carritoProducto = new CarritoProducto
+                {
+                    CarritoId = 1, // Reemplazar con la lógica adecuada para obtener el carrito del usuario actual
+                    Cantidad = cantidad,
+                    Productos = new List<Producto> { producto }
+                };
+                db.CarritoProductos.Add(carritoProducto);
+            }
+            else
+            {
+                carritoProducto.Cantidad += cantidad;
+            }
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult MostrarCarrito()
+        {
+            var carritoProductos = db.CarritoProductos
+                .Where(cp => cp.CarritoId == 1) // Reemplazar con la lógica para identificar el carrito actual
+                .Include(cp => cp.Productos)
+                .ToList();
+
+            var total = carritoProductos.Sum(cp => cp.Productos.Sum(p => p.Precio) * cp.Cantidad);
+
+            ViewBag.Total = total;
+
+            return View(carritoProductos);
+        }
+
+        [HttpPost]
+        public ActionResult EliminarProducto(int productoId)
+        {
+            var carritoProducto = db.CarritoProductos
+                .FirstOrDefault(cp => cp.Productos.Any(p => p.Id == productoId) && cp.CarritoId == 1);
+
+            if (carritoProducto != null)
+            {
+                db.CarritoProductos.Remove(carritoProducto);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("MostrarCarrito");
+        }
+
+        public ActionResult PagoRealizado()
+        {
+            ViewBag.Mensaje = "El pago se realizó con éxito.";
+            return View();
+        }
+
     }
 }

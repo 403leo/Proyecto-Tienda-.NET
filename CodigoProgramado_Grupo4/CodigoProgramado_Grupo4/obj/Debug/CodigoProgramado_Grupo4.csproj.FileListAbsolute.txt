@@ -116,3 +116,43 @@ C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Av
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.RemoverImagenProducto.resources
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributoImagenProductoAgregado.resources
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributosImagenes_1_Y_.resources
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\CodigoProgramado_Grupo4.dll.config
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\CodigoProgramado_Grupo4.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\CodigoProgramado_Grupo4.pdb
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Antlr3.Runtime.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\EntityFramework.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\EntityFramework.SqlServer.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Newtonsoft.Json.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\PagedList.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\PagedList.Mvc.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.Helpers.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.Mvc.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.Optimization.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.Razor.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.WebPages.Deployment.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.WebPages.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.WebPages.Razor.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\WebGrease.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\EntityFramework.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\EntityFramework.SqlServer.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\PagedList.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\PagedList.Mvc.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.Helpers.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.Mvc.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.Razor.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.WebPages.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.WebPages.Deployment.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.WebPages.Razor.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\System.Web.Optimization.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Newtonsoft.Json.xml
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\bin\Antlr3.Runtime.pdb
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.AssemblyReference.cache
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.RemoverImagenProducto.resources
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributoImagenProductoAgregado.resources
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributosImagenes_1_Y_.resources
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.GenerateResource.cache
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.csproj.CoreCompileInputs.cache
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoPr.1A99314B.Up2Date
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.dll
+C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.pdb
