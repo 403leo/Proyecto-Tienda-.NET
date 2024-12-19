@@ -116,3 +116,5 @@ C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Av
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.RemoverImagenProducto.resources
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributoImagenProductoAgregado.resources
 C:\Users\cesar\Source\Repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AtributosImagenes_1_Y_.resources
+C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.AgregarCategoriaToProducto.resources
+C:\Users\leona\OneDrive\Documents\Sexto Cuatrimestre Fidelitas U\Programacion Avanzada\CodigoProyecto\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.ModificacionPrecioProducto.resources

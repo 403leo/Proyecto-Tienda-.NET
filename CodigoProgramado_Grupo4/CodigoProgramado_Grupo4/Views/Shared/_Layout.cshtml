@@ -3,53 +3,115 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title | Bazar en Linea</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        .navbar-nav .nav-link {
+            border: 1px solid #00875e;
+            margin: 2px;
+            transition: background-color 0.3s;
+        }
+
+            .navbar-nav .nav-link:hover {
+                background-color: #00875e;
+            }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+            .navbar-brand img {
+                margin-right: 8px;
+            }
+    </style>
+
 </head>
 
 
 
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" style="background-color: #04394E;">
-        <div class="container">
-            @Html.ActionLink("Tienda", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="background-color: #04394E;">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Login", "Login", "Account", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Usuarios", "Index", "Usuarios", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Productos", "Index", "Productos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Carrito", "Index", "Carritoes", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("CarritoProductos", "Index", "CarritoProductos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Catalogos", "Index", "Catalogos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("CodigoDescuentos", "Index", "CodigoDescuentoes", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("FiltroBusquedas", "Index", "FiltroBusquedas", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("ListaDeseos", "Index", "ListaDeseos", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Resenas", "Index", "Resenas", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Suscripcion", "Index", "Suscripcion", new { area = "" }, new { @class = "nav-link" })</li>
+    <main>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" style="background-color: #04394e;">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home", new { area = "" })">
+                    <img src="/Images/Imagen Logo.jpg" alt="Book Icon" width="30" height="30">
+                    Bazar
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            @Html.ActionLink("Principal", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Login", "Login", "Account", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Usuarios", "Index", "Usuarios", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Productos", "Index", "Productos", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Carrito", "Index", "Carritoes", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("CarritoProductos", "Index", "CarritoProductos", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Catalogos", "Index", "Catalogos", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("CodigoDescuentos", "Index", "CodigoDescuentoes", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("FiltroBusquedas", "Index", "FiltroBusquedas", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            
+                                @Html.Raw("<a href='" + Url.Action("Index", "ListaDeseos", new { area = "" }) + "' class='nav-link'><i class='fas fa-heart nav-icon'></i>ListaDeseos</a>")
+                            
+                        </li>
+                        <li class="nav-item">
+                            @Html.Raw("<a href='" + Url.Action("Index", "Resenas", new { area = "" }) + "' class='nav-link'><i class='fas fa-comments nav-icon'></i>Reseñas</a>")
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Suscripcion", "Index", "Suscripcion", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li>
+                            @Html.ActionLink("Pedido", "Index", "Pedidos", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                    </ul>
+                </div>
 
-                </ul>
-            </div>
+        </nav>
+    </main>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer class="text-center py-3 d-flex justify-content-center align-items-center"
+                    style="background-color: #04394e; color: white; position: relative; bottom: 0; width: 100%;">
+                <div class="container">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p class="mb-0 me-2">&copy; @DateTime.Now.Year | Bazar en Linea | </p>
+                        <a href="@Url.Action("Contact", "Home")" target="_blank" style="color: #00875e; text-decoration: none;">Contacto</a>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 </body>
 </html>

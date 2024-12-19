@@ -24,28 +24,31 @@ namespace CodigoProgramado_Grupo4.Controllers
         {
             try
             {
+                // Agarra la session del usuario
                 var user = Session["User"] as Usuario;
 
+                // Verifica si esta logeado el usuario
                 if (user == null)
                 {
                     return RedirectToAction("Login", "Account");
                 }
 
-                // Verificar el rol directamente desde la sesión
+                // Se Verificaa el rol directamente desde la sesión
                 string rolUsuario = user.Role == "Admin" ? "Admin" : "User";
 
+                // Establece el rol en la vista
                 ViewBag.RolUsuario = rolUsuario;
 
                 var listaDeseos = db.ListaDeseos.Include(l => l.Productos).Include(l => l.Usuarios);
 
-                // Si es usuario normal, filtrar su lista de deseos
+                // Si es usuario normal, se filtra su lista de deseos
                 if (rolUsuario == "User")
                 {
                     int usuarioActualId = user.Id;
                     listaDeseos = listaDeseos.Where(l => l.UsuarioId == usuarioActualId);
                 }
 
-                // Si es admin y la sesión tiene "VerTodas"
+                // Si es admin , el boton de la sesión tiene "VerTodas"
                 if (Session["VerTodas"] != null && (bool)Session["VerTodas"])
                 {
                     ViewBag.VerTodas = true;
@@ -54,7 +57,7 @@ namespace CodigoProgramado_Grupo4.Controllers
                 {
                     ViewBag.VerTodas = false;
 
-                    // Mostrar solo sus listas si no se ha activado "VerTodas"
+                    // Se muestra solo sus listas si no se ha activado "VerTodas"
                     if (rolUsuario == "Admin")
                     {
                         int usuarioActualId = user.Id;
@@ -72,7 +75,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         }
 
 
-        // Acción para cambiar el modo del administrador
+        // Fucnion para cambiar el modo del administrador
         [AllowAnonymous]
         public ActionResult CambiarModo()
         {

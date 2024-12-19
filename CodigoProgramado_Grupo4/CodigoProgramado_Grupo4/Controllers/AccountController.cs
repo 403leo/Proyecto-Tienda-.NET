@@ -13,12 +13,14 @@ namespace CodigoProgramado_Grupo4.Controllers
         // GET: Account
         public ActionResult Login()
         {
+
             return View();
         }
 
         public ActionResult Registro()
         {
             return View();
+
         }
 
         [HttpPost]
@@ -40,6 +42,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Registro([Bind(Include = "Id,Nombre,Apellidos,ultimaFechaConexion,Username,Password,Estado,Role,isAuthenticated")] Usuario usuario)
         {
+
             foreach (Usuario user in db.Usuarios)
             {
                 if (user.Username == usuario.Username)
@@ -49,11 +52,12 @@ namespace CodigoProgramado_Grupo4.Controllers
             }
             usuario.isAuthenticated = true;
             usuario.Estado = true;
+            usuario.Role = "User";
             if (ModelState.IsValid)
             {
                 db.Usuarios.Add(usuario);
                 db.SaveChanges();
-                Session["User"] = new Usuario { Nombre = usuario.Nombre, Apellidos = usuario.Apellidos, ultimaFechaConexion = usuario.ultimaFechaConexion, Username = usuario.Username, Password = usuario.Password, Role = usuario.Role, Estado = true, isAuthenticated = true };
+                Session["User"] = new Usuario { Nombre = usuario.Nombre, Apellidos = usuario.Apellidos, ultimaFechaConexion = usuario.ultimaFechaConexion, Username = usuario.Username, Password = usuario.Password, Role = "User", Estado = true, isAuthenticated = true };
                 return RedirectToAction("Index", "Home");
             }
             return RedirectToAction("Index", "Home");

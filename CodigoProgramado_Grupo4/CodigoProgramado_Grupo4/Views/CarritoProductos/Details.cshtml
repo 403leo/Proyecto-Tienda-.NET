@@ -1,34 +1,26 @@
 ﻿@model CodigoProgramado_Grupo4.Models.CarritoProducto
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles del Producto en el Carrito";
 }
 
-<h2>Details</h2>
+<h2>Detalles del Producto en el Carrito</h2>
 
 <div>
-    <h4>CarritoProducto</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Carritos.Id)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Carritos.Id)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cantidad)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cantidad)
-        </dd>
-
-    </dl>
+    <h4>Información del Producto</h4>
+    <table class="table table-bordered">
+        <tr>
+            <th>Carrito ID</th>
+            <td>@Html.DisplayFor(model => model.Carritos.Id)</td>
+        </tr>
+        <tr>
+            <th>Cantidad</th>
+            <td>@Html.DisplayFor(model => model.Cantidad)</td>
+        </tr>
+    </table>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div>
+    <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-primary">Editar</a>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Volver al Listado</a>
+</div>

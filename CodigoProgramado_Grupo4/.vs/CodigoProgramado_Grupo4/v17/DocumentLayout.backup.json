@@ -1,30 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\",
+  "WorkspaceRootPath": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\controllers\\carritoproductoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\controllers\\carritoproductoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\leona\\onedrive\\documents\\sexto cuatrimestre fidelitas u\\programacion avanzada\\codigoproyecto\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\views\\productos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\productos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\controllers\\carritoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\controllers\\carritoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\views\\carritoproductos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\carritoproductos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\views\\carritoproductos\\errordescuento.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\carritoproductos\\errordescuento.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\views\\carritoproductos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\carritoproductos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\cesar\\source\\repos\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\views\\carritoproductos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\views\\carritoproductos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|c:\\users\\leona\\onedrive\\documents\\sexto cuatrimestre fidelitas u\\programacion avanzada\\codigoproyecto\\proyecto-tienda-.net\\codigoprogramado_grupo4\\codigoprogramado_grupo4\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7C769B3-8CAD-4063-A4FB-E43ED3C25A37}|CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4.csproj|solutionrelative:codigoprogramado_grupo4\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 62,
+          "SelectedChildIndex": 58,
           "Children": [
             {
               "$type": "Bookmark",
@@ -99,10 +83,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Bookmark",
@@ -258,10 +238,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
@@ -269,92 +245,38 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CarritoesController.cs",
-              "DocumentMoniker": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\CarritoesController.cs",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Controllers\\CarritoesController.cs",
-              "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\CarritoesController.cs",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Controllers\\CarritoesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T23:29:32.969Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Edit.cshtml",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Edit.cshtml",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-16T23:14:38.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Create.cshtml",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Create.cshtml",
-              "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Create.cshtml",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-16T22:49:45.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ErrorDescuento.cshtml",
-              "DocumentMoniker": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\CarritoProductos\\ErrorDescuento.cshtml",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\ErrorDescuento.cshtml",
-              "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\CarritoProductos\\ErrorDescuento.cshtml",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\ErrorDescuento.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-16T22:27:31.606Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CarritoProductosController.cs",
-              "DocumentMoniker": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\CarritoProductosController.cs",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Controllers\\CarritoProductosController.cs",
-              "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\CarritoProductosController.cs",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Controllers\\CarritoProductosController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T22:15:17.222Z",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Productos\\Details.cshtml",
+              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Views\\Productos\\Details.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\Productos\\Details.cshtml*",
+              "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\Productos\\Details.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T20:47:46.353Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Index.cshtml",
-              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Index.cshtml",
-              "ToolTip": "C:\\Users\\cesar\\source\\repos\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Index.cshtml",
-              "RelativeToolTip": "CodigoProgramado_Grupo4\\Views\\CarritoProductos\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-16T22:04:36.643Z",
+              "DocumentIndex": 1,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "CodigoProgramado_Grupo4\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Documents\\Sexto Cuatrimestre Fidelitas U\\Programacion Avanzada\\CodigoProyecto\\Proyecto-Tienda-.NET\\CodigoProgramado_Grupo4\\CodigoProgramado_Grupo4\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "CodigoProgramado_Grupo4\\Controllers\\ProductosController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAADwvx4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T20:38:38.479Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

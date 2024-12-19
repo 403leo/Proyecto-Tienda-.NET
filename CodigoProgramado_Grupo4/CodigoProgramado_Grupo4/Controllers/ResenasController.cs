@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -11,7 +12,7 @@ using CodigoProgramado_Grupo4.Models;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
-    [CustomAuthorizationFilter("Admin")]
+    
     public class ResenasController : Controller
     {
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();
@@ -19,8 +20,36 @@ namespace CodigoProgramado_Grupo4.Controllers
         // GET: Resenas
         public ActionResult Index()
         {
-            var resenas = db.Resenas.Include(r => r.Productos).Include(r => r.Usuarios);
-            return View(resenas.ToList());
+            try
+            {
+                var user = Session["User"] as Usuario;
+
+                if (user == null)
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+
+                // Se Verificaa el rol directamente desde la sesión
+                string rolUsuario = user.Role == "Admin" ? "Admin" : "User";
+
+                
+                ViewBag.RolUsuario = rolUsuario;
+
+                // Si es usuario normal, se filtra su lista de deseos
+                //if (rolUsuario == "User")
+                //{
+                //    int usuarioActualId = user.Id;
+                //    listaDeseos = listaDeseos.Where(l => l.UsuarioId == usuarioActualId);
+                //}
+
+                var resenas = db.Resenas.Include(r => r.Productos).Include(r => r.Usuarios);
+                return View(resenas.ToList());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error en ListaDeseosController.Index: {ex.Message}");
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         // GET: Resenas/Details/5
@@ -39,10 +68,22 @@ namespace CodigoProgramado_Grupo4.Controllers
         }
 
         // GET: Resenas/Create
-        public ActionResult Create()
+        public ActionResult Create(int productId)
         {
-            ViewBag.ProductoId = new SelectList(db.Productos, "Id", "CodigoProducto");
-            ViewBag.UsuarioId = new SelectList(db.Usuarios, "Id", "Nombre");
+            // Se obtiene el usuario actual
+            var usuarioActual = (Usuario)Session["User"];
+
+            if (usuarioActual == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var productoActual = db.Productos.Find(productId);
+            if (productoActual == null)
+            {
+                return HttpNotFound("Producto no encontrado.");
+            }
+            ViewBag.ProductoId = productId;
             return View();
         }
 
@@ -51,18 +92,28 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,comentario,UsuarioId,ProductoId")] Resena resena)
+        public ActionResult Create([Bind(Include = "comentario")] Resena resena, int productId)
         {
+            // Se obtiene el usuario actual
+            var usuarioActual = (Usuario)Session["User"];
+
+            if (usuarioActual == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
             if (ModelState.IsValid)
             {
+                // Se guardan los usuarios y productos actuales
+                resena.UsuarioId = usuarioActual.Id;
+                resena.ProductoId = productId;
+                // Se agrega la resena
                 db.Resenas.Add(resena);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Productos", new { id = productId});
             }
 
-            ViewBag.ProductoId = new SelectList(db.Productos, "Id", "CodigoProducto", resena.ProductoId);
-            ViewBag.UsuarioId = new SelectList(db.Usuarios, "Id", "Nombre", resena.UsuarioId);
+            ViewBag.ProductoId = productId;
             return View(resena);
         }
 
@@ -135,5 +186,7 @@ namespace CodigoProgramado_Grupo4.Controllers
             }
             base.Dispose(disposing);
         }
+
+
     }
 }

@@ -2,30 +2,36 @@
     ViewBag.Title = "Iniciar Sesión";
 }
 
-<h2>Iniciar Sesión</h2>
+<h2 class="text-center my-4">Iniciar Sesión</h2>
+
 @if (TempData["MensajeError"] != null)
 {
-    <div class="alert alert-warning">
+    <div class="alert alert-warning text-center">
         @TempData["MensajeError"]
     </div>
 }
 
-
-@using (Html.BeginForm("Login", "Account", FormMethod.Post))
-{
-
-    <div>
-        <label for="username">Usuario:</label>
-        <input type="text" name="username" id="username" required />
-    </div>
-    <div>
-        <label for="Password">Contraseña:</label>
-        <input type="password" name="password" id="password" required />
-    </div>
-    <button type="submit">Ingresar</button>
-    <div>
-        <h4>¿No tines una cuenta? Registrate ahora! 😄</h4>
-        <a>@Html.ActionLink("Registrarse Aquí", "Registro", "Account", new { area = "" }, new { @class = "nav-link" })</a>
-    </div>
-
-}
+<div class="d-flex justify-content-center">
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "w-50" }))
+    {
+        <div class="text-center">
+            <div class="form-group mb-3">
+                <label for="username" class="form-label text-center d-block">Usuario:</label>
+                <input type="text" name="username" id="username" class="form-label text-center" placeholder="Ingrese su usuario" required />
+            </div>
+            <div class="form-group mb-3">
+                <label for="password" class="form-label text-center d-block">Contraseña:</label>
+                <input type="password" name="password" id="password" class="form-label text-center" placeholder="Ingrese su contraseña" required />
+            </div>
+            <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+            </div>
+            <div class="text-center">
+                <h5 class="mb-2">¿No tienes una cuenta? ¡Regístrate ahora! 😄</h5>
+                <a>
+                    @Html.ActionLink("Registrarse Aquí", "Registro", "Account", new { area = "" }, new { @class = "btn btn-link" })
+                </a>
+            </div>
+        </div>
+    }
+</div>

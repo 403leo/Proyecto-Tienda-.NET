@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<CodigoProgramado_Grupo4.Models.CarritoProducto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Carrito de Compras";
 }
 
-<h2>Index</h2>
+<h2>Carrito de Compras</h2>
+
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Agregar Producto", "Create", null, new { @class = "btn btn-success" })
     </p>
     <form method="post" action="@Url.Action("CanjearCodigo", "CarritoProductos")" id="miFormulario">
         <input type="text" class="form-control" id="codigo" name="code" placeholder="Ingrese un código de descuento" />
@@ -16,30 +17,49 @@
 </div>
 
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Carritos.Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cantidad)
-        </th>
-        <th></th>
-    </tr>
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio Unitario</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var carrito in Model)
+        {
+            foreach (var producto in carrito.Productos)
+            {
+                <tr>
+                    <td>@producto.NombreProducto</td>
+                    <td>@producto.Precio</td>
+                    <td>@carrito.Cantidad</td>
+                    <td>@(producto.Precio * carrito.Cantidad)</td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = carrito.Id }, new { @class = "btn btn-warning" }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = carrito.Id }, new { @class = "btn btn-info" }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = carrito.Id }, new { @class = "btn btn-danger" }) |
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Carritos.Id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cantidad)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
 </table>
+
+<div class="text-right">
+    @if (ViewBag.Total != null)
+    {
+        <h3>Total: @ViewBag.Total.ToString("C")</h3>
+    }
+    @if (ViewBag.TotalConDescuento != null)
+    {
+        <h3>Total con Descuento: @ViewBag.TotalConDescuento.ToString("C")</h3>
+    }
+</div>
+
+<div class="text-right">
+    @Html.ActionLink("Pagar", "PagoRealizado", null,
+            new { @class = "btn btn-success btn-lg d-inline-block square-button" })
+</div>

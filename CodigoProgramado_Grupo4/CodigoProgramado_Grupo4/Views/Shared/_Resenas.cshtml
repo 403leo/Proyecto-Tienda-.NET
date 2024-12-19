@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<CodigoProgramado_Grupo4.Models.Resena>
 
 <div class="mb-4 text-end">
-    <a href="@Url.Action("Create", "Resenas", new { productoId = ViewBag.ProductoId })" class="btn btn-success">
+    <a href="@Url.Action("Create", "Resenas", new { productId = ViewBag.ProductoId })" class="btn btn-success">
         Agregar Reseña
     </a>
 </div>
@@ -22,9 +22,12 @@ else
                     <div class="card-body">
                         <p class="card-text">@Html.DisplayFor(modelItem => producto.comentario)</p>
                         <div class="d-flex justify-content-end">
-                            <a href="@Url.Action("Edit", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-primary me-2">Editar</a>
-                            <a href="@Url.Action("Details", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-info me-2">Detalles</a>
-                            <a href="@Url.Action("Delete", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-danger">Eliminar</a>
+                            @if (ViewBag.RolUsuario == "Admin")
+                            {
+                                <a href="@Url.Action("Edit", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-primary me-2">Editar</a>
+                                <a href="@Url.Action("Details", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-info me-2">Detalles</a>
+                                <a href="@Url.Action("Delete", "Resenas", new { id = producto.Id })" class="btn btn-sm btn-danger">Eliminar</a>
+                            }
                         </div>
                     </div>
                 </div>

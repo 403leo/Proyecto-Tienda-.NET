@@ -1,19 +1,51 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contáctanos";
 }
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+<main aria-labelledby="title" style="font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <h2 id="title" style="color: #2c3e50; text-align: center; margin-bottom: 20px;">@ViewBag.Title</h2>
+    
+    <div class="container">
+        <div class="row">
+            <!-- Misión -->
+            <div class="col-md-3 info-card">
+                <h4>Misión</h4>
+                <p>En Bazar en Línea, nos esforzamos por ofrecer una experiencia de compra fácil y segura, con una amplia variedad de productos a precios competitivos, todo desde la comodidad de tu hogar.</p>
+            </div>
 
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
+            <!-- Productos destacados -->
+            <div class="col-md-3 info-card">
+                <h4>Productos Destacados</h4>
+                <p>Encuentra desde artículos para el hogar, tecnología, moda y más. Actualizamos nuestro catálogo constantemente para brindarte lo mejor.</p>
+            </div>
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
+            <!-- Servicio al cliente -->
+            <div class="col-md-3 info-card">
+                <h4>Servicio al Cliente</h4>
+                <p>Tu satisfacción es nuestra prioridad. Contáctanos para cualquier consulta o asistencia a través de nuestro correo: <a href="mailto:soporte@bazarenlinea.com">soporte@bazarenlinea.com</a> o por teléfono: 123-456-789.</p>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="col-md-3 info-card">
+                <h4>Encuéntranos</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125740.08576881798!2d-84.02685352569665!3d9.985627863346934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e54469c695db%3A0xb3e73c81bf090e03!2sSoda%20Donde%20Ma%20CR!5e0!3m2!1ses-419!2scr!4v1717550685857!5m2!1ses-419!2scr" width="100%" height="150" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><strong>Visítanos en nuestra tienda física o navega en línea para recibir tus productos en casa.</strong></p>
+            </div>
+        </div>
+    </div>
+
+
+    <section style="text-align: center;">
+        <h3 style="color: #34495e; margin-bottom: 10px;">Síguenos en redes sociales</h3>
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 40px; height: 40px;">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 40px; height: 40px;">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+            </a>
+        </div>
+    </section>
 </main>

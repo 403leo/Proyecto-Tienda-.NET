@@ -1,10 +1,53 @@
-﻿@model IEnumerable<CodigoProgramado_Grupo4.Models.Producto>
+﻿@using PagedList
+@using PagedList.Mvc;
+@model List<CodigoProgramado_Grupo4.Models.Producto>
 
 @{
-    ViewBag.Title = "Productos Principales";
+    ViewBag.Title = "Productos";
 }
 
-<h2>Productos Principales</h2>
+<h2>Productos</h2>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    <div class="d-flex flex-wrap align-items-center mb-3">
+        <div class="form-group me-2">
+            <label for="searchString">Buscar por nombre:</label>
+            @Html.TextBox("searchString", ViewBag.CurrentSearch as string, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group me-2">
+            <label for="categoria">Categoría:</label>
+            @Html.TextBox("categoria", ViewBag.CurrentCategoria as string, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group me-2">
+            <label for="precioMin">Precio mínimo:</label>
+            <input type="number" name="precioMin" value="@ViewBag.CurrentPrecioMin" class="form-control" step="0.01" />
+        </div>
+
+        <div class="form-group me-2">
+            <label for="precioMax">Precio máximo:</label>
+            <input type="number" name="precioMax" value="@ViewBag.CurrentPrecioMax" class="form-control" step="0.01" />
+        </div>
+
+        <div class="form-group me-2">
+            <label for="disponibilidad">Disponibilidad:</label>
+            @Html.DropDownList("disponibilidad", new SelectList(new[]
+            {
+                new { Value = "", Text = "Seleccione" },
+                new { Value = "true", Text = "Disponible" },
+                new { Value = "false", Text = "No Disponible" }
+            }, "Value", "Text", ViewBag.CurrentDisponibilidad), new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label>&nbsp;</label> <!-- Espacio para alinear el botón con los campos -->
+            <button type="submit" class="btn btn-primary d-block">Buscar</button>
+        </div>
+    </div>
+}
+
 
 <div class="row">
     @foreach (var producto in Model)
@@ -13,7 +56,7 @@
             <div class="card mb-4 shadow-sm">
                 @if (producto.Imagen != null && producto.Imagen.Length > 0)
                 {
-                    <img src="@string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(producto.Imagen))" alt="Imagen del producto" class="card-img-top " width="100%" height="200px"/>
+                    <img src="@string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(producto.Imagen))" alt="Imagen del producto" class="card-img-top" width="100%" height="200px" />
                 }
                 else
                 {
@@ -28,5 +71,17 @@
             </div>
         </div>
     }
-      
-</div>
+
+    <div class="pagination">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1, searchString = ViewBag.CurrentSearch, categoria = ViewBag.CurrentCategoria, precioMin = ViewBag.CurrentPrecioMin, precioMax = ViewBag.CurrentPrecioMax, disponibilidad = ViewBag.CurrentDisponibilidad })" class="btn btn-link">Anterior</a>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <a href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1, searchString = ViewBag.CurrentSearch, categoria = ViewBag.CurrentCategoria, precioMin = ViewBag.CurrentPrecioMin, precioMax = ViewBag.CurrentPrecioMax, disponibilidad = ViewBag.CurrentDisponibilidad })" class="btn btn-link">Siguiente</a>
+        }
+    </div>
+
+

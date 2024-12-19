@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using CodigoProgramado_Grupo4.Filters;
 using CodigoProgramado_Grupo4.Models;
 using System.Web.Mvc.Filters;
+using System.Diagnostics;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
@@ -19,6 +20,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();
 
         // GET: Productos
+        [CustomAuthorizationFilter("Admin")]
         public ActionResult Index()
         {
             return View(db.Productos.ToList());
@@ -27,19 +29,57 @@ namespace CodigoProgramado_Grupo4.Controllers
         // GET: Productos/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Producto producto = db.Productos.Include(p => p.Resenas).FirstOrDefault(p => p.Id == id);
+
+                var user = Session["User"] as Usuario;
+
+                if (user == null) 
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    if (producto == null)
+                    {
+                        return HttpNotFound();
+                    }
+
+                    // Se pasa el id del producto para que este disponible en la vistas parciales ( es decir en el _Resenas)
+                    ViewBag.ProductoId = id;
+                    return View(producto);
+                }
+
+                // Se Verificaa el rol directamente desde la sesión
+                string rolUsuario = user.Role == "Admin" ? "Admin" : "User";
+
+
+                ViewBag.RolUsuario = rolUsuario;
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                if (producto == null)
+                {
+                    return HttpNotFound();
+                }
+
+                // Se pasa el id del producto para que este disponible en la vistas parciales ( es decir en el _Resenas)
+                ViewBag.ProductoId = id;
+                return View(producto);
             }
-            Producto producto = db.Productos.Find(id);
-            if (producto == null)
+            catch (Exception ex)
             {
-                return HttpNotFound();
+                Debug.WriteLine($"Error en ListaDeseosController.Index: {ex.Message}");
+                return RedirectToAction("Error", "Home");
             }
-            return View(producto);
+
+            
         }
 
         // GET: Productos/Create
+        [CustomAuthorizationFilter("Admin")]
         public ActionResult Create()
         {
             return View();
@@ -50,7 +90,8 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen, HttpPostedFileBase Imagen2, HttpPostedFileBase Imagen3)
+        [CustomAuthorizationFilter("Admin")]
+        public ActionResult Create([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado,Categoria")] Producto producto, HttpPostedFileBase Imagen, HttpPostedFileBase Imagen2, HttpPostedFileBase Imagen3)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +128,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         }
 
         // GET: Productos/Edit/5
+        [CustomAuthorizationFilter("Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -106,7 +148,8 @@ namespace CodigoProgramado_Grupo4.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado")] Producto producto, HttpPostedFileBase Imagen, HttpPostedFileBase Imagen2, HttpPostedFileBase Imagen3)
+        [CustomAuthorizationFilter("Admin")]
+        public ActionResult Edit([Bind(Include = "Id,CodigoProducto,NombreProducto,Precio,disponibilidadInventario,estado,Categoria")] Producto producto, HttpPostedFileBase Imagen, HttpPostedFileBase Imagen2, HttpPostedFileBase Imagen3)
         {
             if (ModelState.IsValid)
             {
@@ -142,6 +185,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         }
 
         // GET: Productos/Delete/5
+        [CustomAuthorizationFilter("Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -159,6 +203,7 @@ namespace CodigoProgramado_Grupo4.Controllers
         // POST: Productos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [CustomAuthorizationFilter("Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Producto producto = db.Productos.Find(id);
@@ -215,10 +260,6 @@ namespace CodigoProgramado_Grupo4.Controllers
             db.SaveChanges();
             return RedirectToAction("Details", "Productos", new { id = productId });
         }
-
-
-
-
 
     }
 }

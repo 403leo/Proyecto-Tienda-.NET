@@ -10,12 +10,13 @@ namespace CodigoProgramado_Grupo4.Models
         public int Id { get; set; }
         public string CodigoProducto { get; set; }
         public string NombreProducto { get; set; }
-        public decimal Precio { get; set; }
+        public double Precio { get; set; }
         public bool disponibilidadInventario { get; set; }
         public bool estado { get; set; }
         public byte[] Imagen { get; set; }
         public byte[] Imagen2 { get; set; }
         public byte[] Imagen3 { get; set; }
+        public string Categoria { get; set; } 
         public virtual ICollection<Catalogo> Catalogos { get; set; }
         public virtual ICollection<CarritoProducto> CarritoProductos { get; set; }
         public virtual ICollection<CodigoDescuento> CodigoDescuentos { get; set; }
