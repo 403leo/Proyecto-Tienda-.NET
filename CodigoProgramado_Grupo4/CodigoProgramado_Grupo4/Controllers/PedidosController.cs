@@ -11,7 +11,7 @@ using CodigoProgramado_Grupo4.Models;
 
 namespace CodigoProgramado_Grupo4.Controllers
 {
-    [CustomAuthorizationFilter("Admin")]
+    //[CustomAuthorizationFilter("Admin")]
     public class PedidosController : Controller
     {
         private UsuarioPedidosDbContext db = new UsuarioPedidosDbContext();

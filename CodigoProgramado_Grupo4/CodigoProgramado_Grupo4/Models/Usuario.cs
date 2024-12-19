@@ -22,6 +22,5 @@ namespace CodigoProgramado_Grupo4.Models
         public virtual ICollection<Suscripcion> Suscripciones { get; set; }
         public virtual ICollection<Resena> Resenas { get; set; }
         public virtual ICollection<ListaDeseos> ListaDeseos { get; set; }
-        public virtual ICollection<CarritoProducto> CarritoProductos { get; set; }
     }
 }

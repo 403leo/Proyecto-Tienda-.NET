@@ -64,12 +64,15 @@ namespace CodigoProgramado_Grupo4.Controllers
             if (verifyCode != null)
             {
                 // Obtener el usuario actual desde la sesión
-                var user = (Usuario)Session["User"];
+                var userId = ((Usuario)Session["User"]).Id; // Obtén el ID del usuario actual desde la sesión
+                var user = db.Usuarios.Find(userId); // Carga el usuario desde el contexto actual
+
                 if (user == null)
                 {
                     return RedirectToAction("~/Account/RegisterError");
                 }
 
+                
                 // Obtener el carrito relacionado con el usuario actual
                 var carrito = db.Carritos
                     .Include(c => c.CarritoProductos.Select(cp => cp.Productos))

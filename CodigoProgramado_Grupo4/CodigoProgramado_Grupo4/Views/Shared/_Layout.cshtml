@@ -6,6 +6,7 @@
     <title>@ViewBag.Title | Bazar en Linea</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <style>
         .navbar-nav .nav-link {
@@ -48,48 +49,45 @@
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            @Html.ActionLink("Principal", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                            <a href="@Url.Action("Contact", "Home")" class="nav-link">
+                                <i class="fas fa-comments nav-icon"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                            <a href="@Url.Action("Login", "Account")" class="nav-link">
+                                <i class="fas fa-sign-in-alt  nav-icon"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Login", "Login", "Account", new { area = "" }, new { @class = "nav-link" })
+                            <a href="@Url.Action("Index", "Usuarios")" class="nav-link">
+                                <i class="fas fa-users  nav-icon"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Usuarios", "Index", "Usuarios", new { area = "" }, new { @class = "nav-link" })
+                            <a href="@Url.Action("Index", "Productos")" class="nav-link">
+                                <i class="fas fa-box nav-icon nav-icon"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Productos", "Index", "Productos", new { area = "" }, new { @class = "nav-link" })
+                            <a href="@Url.Action("Index", "CarritoProductos")" class="nav-link">
+                                <i class="fas fa-shopping-cart  nav-icon"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Carrito", "Index", "Carritoes", new { area = "" }, new { @class = "nav-link" })
+                            <a href="@Url.Action("Index", "CodigoDescuentoes")" class="nav-link">
+                                <i class="fas fa-tags  nav-icon"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("CarritoProductos", "Index", "CarritoProductos", new { area = "" }, new { @class = "nav-link" })
+                            <a href="@Url.Action("Index", "ListaDeseos")" class="nav-link">
+                                <i class="fas fa-heart nav-icon"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Catalogos", "Index", "Catalogos", new { area = "" }, new { @class = "nav-link" })
-                        </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("CodigoDescuentos", "Index", "CodigoDescuentoes", new { area = "" }, new { @class = "nav-link" })
-                        </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("FiltroBusquedas", "Index", "FiltroBusquedas", new { area = "" }, new { @class = "nav-link" })
-                        </li>
-                        <li class="nav-item">
-                            
-                                @Html.Raw("<a href='" + Url.Action("Index", "ListaDeseos", new { area = "" }) + "' class='nav-link'><i class='fas fa-heart nav-icon'></i>ListaDeseos</a>")
-                            
-                        </li>
-                        <li class="nav-item">
-                            @Html.Raw("<a href='" + Url.Action("Index", "Resenas", new { area = "" }) + "' class='nav-link'><i class='fas fa-comments nav-icon'></i>Reseñas</a>")
-                        </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("Suscripcion", "Index", "Suscripcion", new { area = "" }, new { @class = "nav-link" })
-                        </li>
-                        <li>
-                            @Html.ActionLink("Pedido", "Index", "Pedidos", new { area = "" }, new { @class = "nav-link" })
+                            <a href="@Url.Action("Index", "Suscripcion")" class="nav-link">
+                                <i class="fas fa-bell  nav-icon"></i>
+                            </a>
+                        
                         </li>
                     </ul>
                 </div>
