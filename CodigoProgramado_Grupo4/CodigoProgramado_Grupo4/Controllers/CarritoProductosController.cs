@@ -47,7 +47,35 @@ namespace CodigoProgramado_Grupo4.Controllers
             var verifyCode = db.CodigoDescuentos.FirstOrDefault(c => c.codigo == code);
             if (verifyCode != null)
             {
-                return RedirectToAction("Index");
+                // Obtener el usuario actual desde la sesión
+                var user = (Usuario)Session["User"];
+                if (user == null)
+                {
+                    return RedirectToAction("ErrorSesion");
+                }
+
+                // Obtener el carrito relacionado con el usuario actual
+                var carrito = db.Carritos
+                    .Include(c => c.CarritoProductos.Select(cp => cp.Productos))
+                    .FirstOrDefault(c => c.Pedidos.UsuarioId == user.Id);
+
+                if (carrito == null)
+                {
+                    return RedirectToAction("ErrorCarrito");
+                }
+
+                // Calcular el total del carrito
+                var totalCarrito = carrito.CarritoProductos.Sum(cp =>
+                    cp.Productos.Sum(p => p.Precio * cp.Cantidad));
+
+                // Calcular el descuento
+                var descuento = verifyCode.valor_descuento / 100.0;
+                var totalConDescuento = totalCarrito - (totalCarrito * descuento);
+
+                // Pasar el total con descuento a la vista
+                ViewBag.TotalConDescuento = totalConDescuento;
+
+                return View("Index", carrito.CarritoProductos.ToList());
             }
 
             return RedirectToAction("ErrorDescuento");

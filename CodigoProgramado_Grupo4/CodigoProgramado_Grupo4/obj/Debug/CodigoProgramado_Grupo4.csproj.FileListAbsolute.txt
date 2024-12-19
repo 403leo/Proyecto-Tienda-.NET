@@ -156,3 +156,4 @@ C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\Cod
 C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoPr.1A99314B.Up2Date
 C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.dll
 C:\Users\IsylolXD\OneDrive\Documents\Visual Studio 2022\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.pdb
+C:\Users\cesar\source\repos\Proyecto-Tienda-.NET\CodigoProgramado_Grupo4\CodigoProgramado_Grupo4\obj\Debug\CodigoProgramado_Grupo4.Migrations.Arreglotipodevalordeprecio.resources
